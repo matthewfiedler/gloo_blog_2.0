@@ -3,6 +3,88 @@
 
 //fonts
 
+
+@font-face {
+    font-family: 'museo_sans_700regular';
+    src: url('../font/museosans_700-webfont.eot');
+    src: url('../font/museosans_700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/museosans_700-webfont.woff') format('woff'),
+         url('../font/museosans_700-webfont.ttf') format('truetype'),
+         url('../font/museosans_700-webfont.svg#museo_sans_500regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'museo_sans_500regular';
+    src: url('../font/museosans_500-webfont.eot');
+    src: url('../font/museosans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/museosans_500-webfont.woff') format('woff'),
+         url('../font/museosans_500-webfont.ttf') format('truetype'),
+         url('../font/museosans_500-webfont.svg#museo_sans_500regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'museo_sans_900regular';
+    src: url('../font/museosans_900-webfont.eot');
+    src: url('../font/museosans_900-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/museosans_900-webfont.woff') format('woff'),
+         url('../font/museosans_900-webfont.ttf') format('truetype'),
+         url('../font/museosans_900-webfont.svg#museo_sans_900regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'museo_sans_300regular';
+    src: url('../font/museosans-300-webfont.eot');
+    src: url('../font/museosans-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/museosans-300-webfont.woff') format('woff'),
+         url('../font/museosans-300-webfont.ttf') format('truetype'),
+         url('../font/museosans-300-webfont.svg#museo_sans_300regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'museo_sans_100regular';
+    src: url('../font/museosans-100-webfont.eot');
+    src: url('../font/museosans-100-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/museosans-100-webfont.woff') format('woff'),
+         url('../font/museosans-100-webfont.ttf') format('truetype'),
+         url('../font/museosans-100-webfont.svg#museo_sans_100regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_sans_rounded700';
+    src: url('../font/museosansrounded-700-webfont.eot');
+    src: url('../font/museosansrounded-700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/museosansrounded-700-webfont.woff') format('woff'),
+         url('../font/museosansrounded-700-webfont.ttf') format('truetype'),
+         url('../font/museosansrounded-700-webfont.svg#museo_sans_rounded700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 @font-face {
     font-family: 'socialicoregular';
     src: url('../font/socialico-webfont.eot');
@@ -18,18 +100,28 @@
 
 // color vars
 
-$primary-color: #5a0155;
-$light-gray-color: #eee;
+$primary-color: #38b3ce;
+$secondary-color: #90908f;
+$tertiary-color: #66be61;
+$light-gray-color: #f2f2f2;
+$dark-gray-color: rgb(46,49,55);
 $gray-color:#dddddd;
-$text-color: #444;
-$black-color:#2a2929;
+$text-color: #424343;
+$dark-text-color: #4a4a4a;
+$black-color:#111111;
 
 // font vars
 
-$regular-font-name:"Helvetica Neue", Helvetica, Arial, sans-serif;
-$bold-font-name:"Helvetica Neue", Helvetica, Arial, sans-serif;
-$paragraph-font-name:"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+
+$large-font-name:'museo_sans_900regular', Helvetica, Arial, sans-serif;
+$regular-font-name:'museo_sans_300regular', Helvetica, Arial, sans-serif;
+$medium-font-name:'museo_sans_500regular', Helvetica, Arial, sans-serif;
+$bold-font-name:'museo_sans_700regular', Helvetica, Arial, sans-serif;
+$extra-bold-font-name:'museo_sans_900regular', Helvetica, Arial, sans-serif;
 $social-font-name: 'socialicoregular';
+
 
 // baseline
 
@@ -41,42 +133,119 @@ $text-column-gutter-width: $baseline;
 
 
 body{
-  font: 100% $paragraph-font-name;
-  font-size:16px;
+  font: 100% $regular-font-name;
+  font-size:12pt;
   color: $text-color;
   //for fixed navbar
-  padding-top:70px;
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
   width:100%;
   line-height: $baseline;
+  padding-top:100px;
+  height:100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  zoom:1;
 }
 
-// type
+// headings
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { 
-  font-weight: inherit; 
+  color:$text-color;
+  font-weight: inherit;
 }
+
+h1 a:hover {
+  color: $text-color;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin:0;
   margin-bottom:$baseline; 
   color:$text-color;
 }
 
-h1,h2,h3,h4{
+
+h1{
+  font-family:$large-font-name;
+}
+h2{
   font-family:$regular-font-name;
 }
-h5,h6{
+h3{
+  font-family:$bold-font-name;
+}
+h4{
+  font-family:$medium-font-name;
+}
+h5{
+  font-family:$bold-font-name;
+}
+h6{
   font-family:$regular-font-name;
 }
 
-p  {font-size: 1em; line-height:$baseline;}
-h1 { font-size: 2.8em; line-height:$baseline*2;}
-h2 { font-size: 2em; line-height:$baseline*1.5;}
-h3 { font-size: 1.8em; line-height:$baseline*2;}
-h4 { font-size: 1.4em; line-height:$baseline;}
-h5 { font-size: 1em; line-height:$baseline;}
+p {
+   font-size: 1em; 
+   line-height:$baseline; 
+   color:tint($text-color,0%);
+}
+
+.light-font-color {
+    color: $secondary-color;
+}
+
+h1 {
+  font-size: 3em;
+  line-height:$baseline*2.1;
+}
+h2 { font-size: 2em; line-height:$baseline*1.7;}
+h3 { font-size: 2em; line-height:$baseline*1.8;}
+h4 { font-size: 1.5em; line-height:$baseline;}
+h5 { font-size: 1em; line-height:$baseline/1.5;}
 h6 { font-size: 0.9em; line-height:$baseline;}
+
+h1{
+  &.jumbo-text{
+    font-size:5em;
+    line-height:$baseline*3;
+  }
+}
+
+blockquote{
+  border:none;
+  padding:$baseline;
+  font-size: 4.5em; 
+  line-height:$baseline*3.5;
+  font-family:$regular-font-name;
+}
+
+.quote-text{
+  font-style:italic;
+}
+
+.enhanced-font{
+  font-size:1.2em;
+}
+
+.shadowed-text{
+  text-shadow:0px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.text-overlay-box{
+  padding:$baseline;
+  background-color:rgba(0,0,0,.7);
+}
+
+.text-overlay-box-light{
+  padding:$baseline;
+  background-color:rgba(255,255,255,.9);
+}
+
+.overlay-shadow{
+  box-shadow:0 0px 10px rgba(0,0,0,.2);
+}
+
 
 //text columns
 
@@ -94,6 +263,22 @@ h6 { font-size: 0.9em; line-height:$baseline;}
   text-transform:uppercase;
 }
 
+// Form
+
+.form-control {
+  background-color: #f7f8f8;
+  border: none;
+}
+
+label {
+  font-size: .5em;
+  color: #1e1f20;
+  font-family: "museo_sans_300regular", Helvetica, Arial, sans-serif;
+}
+
+.input-lg {
+  font-size: .4em;
+}
 
 //font families
 
@@ -102,9 +287,6 @@ h6 { font-size: 0.9em; line-height:$baseline;}
 }
 .regular-font-name{
     font-family:$regular-font-name;
-}
-.paragraph-font-name{
-    font-family:$paragraph-font-name;
 }
 
 // display
@@ -151,6 +333,10 @@ ul.inline{
         display:inline-block;
         padding:0 5px;
     }
+}
+
+.border-bottom {
+  border-bottom:1px solid $gray-color;
 }
 
 //margin helpers
@@ -328,6 +514,154 @@ ul.inline{
   padding-left: $baseline/4 !important;
 }
 
+// buttons
+
+.btn {
+  font-family: "museo_sans_300regular", Helvetica, Arial, sans-serif;
+  -moz-transition-duration: 0.3s;
+  font-size: .5em;
+  letter-spacing: .5px;
+  color: white !important;
+  border: none;
+  background-color: $secondary-color;
+
+  &:hover {
+    border: none;
+  }
+
+  &.btn-primary {
+    background-color: $tertiary-color;
+    border-color: $primary-color;
+  }
+
+  &.btn-primary:hover {
+    background-color: #2c8fa4 !important;
+  }
+
+  &.btn-default {
+    font-family: "museo_sans_700regular", Helvetica, Arial, sans-serif;
+    background-color: $secondary-color;
+    font-size: 1em;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: white !important;
+    border: none;
+  }
+
+  &.btn-default:hover{
+    border-color: $secondary-color;
+    background-color: #51984d !important;
+  }
+
+}
+
+.btn-xl {
+  padding: $baseline $baseline*2;
+}
+
+#form-submit {
+  font-family: "museo_sans_300regular", Helvetica, Arial, sans-serif;
+  background-color: $secondary-color !important;
+}
+
+#form-submit:hover{
+  border-color: $secondary-color;
+  background-color: #51984d !important;
+}
+
+//main nav
+
+nav{
+  &.main-nav{
+    background-color:white;
+    padding:$baseline/4 0;
+    ul{
+        margin-top:8px;
+        li{
+            font-size:1em!important;
+            margin:0 $baseline/2;
+            margin-top:3px;
+            .btn{
+                margin-top:0px;
+            }
+            &.active{
+              a{
+                background:none!important;
+                color:black!important;
+              }
+            }
+            a{
+              @include transition-duration(.3s);
+            }
+        }
+    }
+    .btn{
+        padding:$baseline/2;
+    }
+  }
+}
+
+.logo{
+    width:122px;
+    height:44px;
+    background-image:image-url('../images/eu_logo.png');
+    }
+
+// Footer
+
+footer {
+  background-color: #1e1f20;
+  color: #f2f2f2;
+  font-family: "museo_sans_100regular", Helvetica, Arial, sans-serif;
+}
+
+footer a {
+  color: #f2f2f2;
+}
+
+footer a:hover {
+  color: #f2f2f2;
+}
+
+// Aside
+
+.blog-sidebar{
+  ul{
+    li{
+      a{
+        padding:$baseline/2 0 !important;
+        display:block;
+        border-bottom:1px solid $gray-color;
+        font-size: .85em
+      }
+    }
+  }
+}
+
+aside h3 {
+  font-size: 1.05em;
+  margin-bottom: $baseline/2;
+  color: #1e1f20;
+  font-family: "museo_sans_500regular", Helvetica, Arial, sans-serif;
+}
+
+aside img {
+  width: 100px;
+}
+
+aside p {
+  font-size: .85em;
+}
+
+aside a {
+  color: #1e1f20;
+  text-decoration: none;
+}
+
+aside a:hover {
+  color: #1e1f20;
+  text-decoration: underline;
+}
 
 
 // Clearing
@@ -346,7 +680,9 @@ ul.inline{
 
 //bootstrap overrides
 
-
+.secondary-background {
+  background-color: $light-gray-color;
+}
 
 //responsify
 

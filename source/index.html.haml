@@ -1,9 +1,25 @@
-.col-lg-12
-	.double-margin-top
-		.text-center
-			%h1
-				We are Brand
-				%br
-				An independent community advisory company
-			%a.btn.btn-primary.btn-large.text-uppercase{:href=>"#"}
-				Get Started
+;;;
+
+    "layout": "_blog"
+  
+;;;
+
+
+%section
+    .container
+        .row
+            .col-md-8
+                - 2.times do
+                    =partial "article"
+
+                =partial "pagination"
+                
+                =partial "jobs"
+
+            .col-md-1
+            .col-md-3
+                =partial "sidebar"
+
+
+
+

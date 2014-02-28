@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width,initial-scale=1, user-scalable=no", :name => "viewport"}
+    %title Gloo Blog
+    %script{:src => "http://code.jquery.com/jquery-latest.min.js", :type => "text/javascript"}
+    = stylesheet_link_tag  "font-awesome","bootstrap","style"
+    = javascript_include_tag "bootstrap"
+  %body
+    = partial "main_nav"
+    = yield
+    = partial "footer"
